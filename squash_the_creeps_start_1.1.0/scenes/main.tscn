@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cegwcavtpcljk"]
+[gd_scene load_steps=4 format=3 uid="uid://cegwcavtpcljk"]
+
+[ext_resource type="PackedScene" uid="uid://b5qaw1c6vp0mm" path="res://scenes/player.tscn" id="1_domft"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xjjuq"]
 size = Vector3(60, 2, 60)
@@ -20,3 +22,6 @@ mesh = SubResource("BoxMesh_1orki")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 50, 0)
 shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("1_domft")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.20876, 0)
