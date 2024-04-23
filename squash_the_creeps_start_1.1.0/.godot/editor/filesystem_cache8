@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713811730
+::res://::1713909458
 default_bus_layout.tres::AudioBusLayout::-1::1713811718::0::1::::<><>::
 default_env.tres::Environment::-1::1713811718::0::1::::<><>::
 icon.png::CompressedTexture2D::5381786775727861169::1606009720::1713811730::1::::<><>::
@@ -15,3 +15,8 @@ pupil.material::StandardMaterial3D::-1::1606514142::0::1::::<><>::
 ::res://fonts/::1713811730
 LICENSE.txt::TextFile::-1::1605988452::0::1::::<><>::
 Montserrat-Medium.ttf::FontFile::7986148568367578412::1323702000::1713811730::1::::<><>::
+::res://scenes/::1713815598
+main.tscn::PackedScene::5067322387215664776::1713815598::0::1::::<><>::uid://b5qaw1c6vp0mm::::res://scenes/player.tscn
+player.tscn::PackedScene::4525156694498829360::1713815598::0::1::::<><>::uid://da1ls7rpe002p::::res://art/player.glb<>res://scripts/player.gd
+::res://scripts/::1713814520
+player.gd::GDScript::-1::1713814520::0::1::::Player<>CharacterBody3D<>::
