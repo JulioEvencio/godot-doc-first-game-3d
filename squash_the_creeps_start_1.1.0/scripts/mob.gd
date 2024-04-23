@@ -1,4 +1,5 @@
 extends CharacterBody3D
+class_name Mob
 
 @export var min_speed : int = 10
 @export var max_speed : int = 18
