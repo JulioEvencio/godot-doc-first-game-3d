@@ -1,8 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://cegwcavtpcljk"]
+[gd_scene load_steps=12 format=3 uid="uid://cegwcavtpcljk"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_678qp"]
 [ext_resource type="PackedScene" uid="uid://b5qaw1c6vp0mm" path="res://scenes/player.tscn" id="1_domft"]
 [ext_resource type="PackedScene" uid="uid://jllheh225k0x" path="res://scenes/mob.tscn" id="2_3clfq"]
+[ext_resource type="FontFile" uid="uid://dl1sx2l6chgp5" path="res://fonts/Montserrat-Medium.ttf" id="3_e506t"]
+[ext_resource type="Script" path="res://scripts/score_label.gd" id="4_6aogr"]
+
+[sub_resource type="Theme" id="Theme_85cw2"]
+default_font = ExtResource("3_e506t")
+default_font_size = 22
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xjjuq"]
 size = Vector3(60, 2, 60)
@@ -26,6 +32,25 @@ point_count = 5
 [node name="Main" type="Node"]
 script = ExtResource("1_678qp")
 mob_scene = ExtResource("2_3clfq")
+
+[node name="UserInterface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_85cw2")
+
+[node name="ScoreLabel" type="Label" parent="UserInterface"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 81.0
+offset_bottom = 43.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Score: 0"
+script = ExtResource("4_6aogr")
 
 [node name="Ground" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
